@@ -91,9 +91,9 @@ const Core = function ({
 
     if (currentQuestionIdx + 1 === questions.length) {
       if (userInput.length !== questions.length) {
-        alert('Quiz is incomplete');
+        alert('لم يتم الاجابة على كل الأسئلة');
       } else if (allowNavigation) {
-        const submitQuiz = confirm('You have finished all the questions. Submit Quiz now?');
+        const submitQuiz = confirm('لقد انهيت جميع الأسئلة.. إرسال الآن؟');
         if (submitQuiz) {
           setEndQuiz(true);
         }
@@ -137,7 +137,7 @@ const Core = function ({
             className={`answerBtn btn ${answerBtnCorrectClassName}${answerBtnIncorrectClassName}`}
           >
             {questionType === 'text' && <span>{answer}</span>}
-            {questionType === 'photo' && <img src={answer} alt="image" />}
+            {questionType === 'photo' && <img src={answer} alt="صورة" />}
           </button>
         </div>
       );
